@@ -1,7 +1,56 @@
+header {
+  grid-area: header;
+  background-color: white;
+  box-shadow: 1px 1px 10px  black;
+  justify-self: stretch;
+  height: 10vh;
+  width: 100vw;
+  position: fixed;
+
+
+}
+
+section {
+  grid-area: post;
+  overflow-y: auto;
+  //border: 1px solid gray;
+  justify-self: stretch;
+  align-self: stretch;
+  //overflow-x: hidden;
+  //align-content: stretch;
+  //justify-content: center;
+}
+section::-webkit-scrollbar {
+  width: 0;
+
+}
+article {
+  border: 1px solid lightgrey;
+  display: grid;
+  border-radius: 10px;
+  min-height: 30vh;
+  background-color: white;
+  padding: 1%;
+  margin: 1%;
+
+}
+
+.filter {
+
+}
+
 main {
+
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-rows: [first-row] 10vh [second-row] 20vh [third-row];
+  grid-template-rows: [first-row] 10vh [second-row] 10vh [third-row] 1fr [fourth-row] 1fr;
+  grid-template-columns: [first-col] 25vw [second-col] 65vw [third-col] auto;
+  grid-template-areas:
+    " header header header"
+    " . filter ."
+    " sidebar post ."
+    " sidebar post ."
+  ;
 
 }

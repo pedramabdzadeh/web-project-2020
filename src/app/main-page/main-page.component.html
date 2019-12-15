@@ -9,9 +9,18 @@
 
   </div>
 
-  <article *ngFor="let post of posts;let i = index">
+  <section>
+    <article *ngFor="let post of posts;let i = index">
+      <h1>
+        {{post.title}}
+      </h1>
+      <section>
+        {{post.content}}
+      </section>
+    </article>
+  </section>
 
-  </article>
+
 
   <aside>
 
