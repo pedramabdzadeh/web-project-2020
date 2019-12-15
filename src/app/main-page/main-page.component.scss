@@ -1,7 +1,7 @@
 header {
   grid-area: header;
   background-color: white;
-  box-shadow: 1px 1px 10px  black;
+  box-shadow: 1px 1px 10px darkgray;
   justify-self: stretch;
   height: 10vh;
   width: 100vw;
@@ -13,22 +13,53 @@ header {
 section {
   grid-area: post;
   overflow-y: auto;
-  //border: 1px solid gray;
   justify-self: stretch;
   align-self: stretch;
-  //overflow-x: hidden;
-  //align-content: stretch;
-  //justify-content: center;
 }
+
 section::-webkit-scrollbar {
   width: 0;
-
 }
+
+
+.score {
+  grid-area: score;
+  background-color: #f5f5f5;
+}
+
 article {
+  section {
+    grid-area: content;
+    overflow-y: hidden;
+    padding: 1%;
+    word-wrap: break-word;
+    text-wrap: normal;
+  }
+
+  h1 {
+    grid-area: title;
+    align-self: center;
+    line-height: 2;
+    padding: 1%;
+    font-size: 28px;
+  }
+  .buttons {
+    grid-area: buttons;
+    //min-height: 10%;
+  }
+
+  min-height: 30vh;
   border: 1px solid lightgrey;
   display: grid;
+  grid-template-rows: minmax(auto, 5vh) minmax(auto, 10vh) auto minmax(auto, 5vh);
+  grid-template-columns: 10% auto;
+  grid-template-areas:
+    " score channel"
+    " score title"
+    " score content"
+    " score buttons"
+  ;
   border-radius: 10px;
-  min-height: 30vh;
   background-color: white;
   padding: 1%;
   margin: 1%;
@@ -52,5 +83,4 @@ main {
     " sidebar post ."
     " sidebar post ."
   ;
-
 }
