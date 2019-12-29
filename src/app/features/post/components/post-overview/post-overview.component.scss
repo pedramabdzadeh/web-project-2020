@@ -1,0 +1,44 @@
+#container {
+  display: flex;
+  flex-direction: row;
+  width: 50vw;
+  min-height: 50vh;
+  background-color: white;
+}
+
+#score {
+  width: 10%;
+  border-right: 1px solid grey  ;
+}
+
+#post-details {
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+}
+
+#channel-link{
+  height: 5%;
+  border-bottom: 1px solid grey;
+}
+
+#title {
+  height: 10%;
+  border-bottom: 1px solid grey;
+}
+
+#content {
+  height: 70%;
+  border-bottom: 1px solid grey;
+}
+#links {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: 15%;
+}
+#comment, #share {
+  width: 20%;
+  margin-left: 1%;
+  border-right: 1px solid grey;
+}

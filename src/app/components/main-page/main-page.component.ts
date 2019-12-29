@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Post} from '../../models/post';
 
 @Component({
   selector: 'app-main-page',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-page.component.scss']
 })
 export class MainPageComponent implements OnInit {
-  posts: any[] = [
+  posts: Post[] = [
     {title: 'lol', content: 'laughing out load laughing out load laughing out load laughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out load laughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out load laughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out load laughing out loadlaughing out load laughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out load laughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out loadlaughing out load  loadlaughing out loadlaughing out load loadlaughing out loadlaughing out load loadlaughing out loadlaughing out load loadlaughing out loadlaughing out load loadlaughing out loadlaughing out load loadlaughing out loadlaughing out load********** '
     },
     {title: 'lol2', content: 'laughing out load2'},
