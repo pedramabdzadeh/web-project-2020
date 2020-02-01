@@ -8,7 +8,7 @@
 
 #score {
   width: 10%;
-  border-right: 1px solid grey  ;
+  background-color: whitesmoke;
 }
 
 #post-details {
@@ -19,26 +19,82 @@
 
 #channel-link{
   height: 5%;
-  border-bottom: 1px solid grey;
+  display: flex;
+  align-items: center;
+  font-size: small;
+  a {
+    color: grey;
+    text-decoration: none;
+  }
 }
 
 #title {
-  height: 10%;
-  border-bottom: 1px solid grey;
+  height: 15%;
+  display: flex;
+  color: #545454;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 1%;
+  outline: none;
+  font-size: larger;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 #content {
   height: 70%;
-  border-bottom: 1px solid grey;
+  padding-left: 1%;
+  font-size: medium;
+  outline: none;
+  color: dimgrey;
+  cursor: pointer;
 }
 #links {
   display: flex;
   flex-direction: row;
-  width: 90%;
+  width: 100%;
+  background-color: ghostwhite;
   height: 15%;
 }
 #comment, #share {
   width: 20%;
   margin-left: 1%;
-  border-right: 1px solid grey;
+  //border-right: 1px solid grey;
+  font-weight: bold;
+  font-size: small;
+  color: grey;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.score {
+  color: grey;
+  font-size: large;
+  flex-direction: column;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.like-icon {
+  height: 30px;
+  width: 30px;
+  color: grey;
+  font-weight: 800;
+}
+.dislike-icon {
+  height: 25px;
+  width: 25px;
+  color: darkgrey;
+  font-weight: 800;
+}
+.like-icon-selected {
+  color: mediumvioletred;
+}
+
+.dislike-icon-selected {
+  color: black;
 }

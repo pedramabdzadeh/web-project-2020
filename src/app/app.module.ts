@@ -6,6 +6,7 @@ import { MainPageComponent } from './components/main-page/main-page.component';
 import { NavigationModule } from './features/navigation/navigation.module';
 import { ApiManagementModule } from './features/api-management/api-management.module';
 import { PostModule } from './features/post/post.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { PostModule } from './features/post/post.module';
     NavigationModule,
     ApiManagementModule,
     PostModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

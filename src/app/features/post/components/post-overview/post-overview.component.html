@@ -1,24 +1,38 @@
 <div id="container">
-  <div id="score">
-
+  <div id="score" class="score">
+    <button class="score-button" (click)="like()">
+      <mat-icon svgIcon="like" class="like-icon" [ngClass]="likeButtonClass" ></mat-icon>
+    </button>
+    <span>
+      {{postVariables.score}}
+    </span>
+    <button class="score-button" (click)="dislike()">
+      <mat-icon svgIcon="dislike" class="dislike-icon" [ngClass]="dislikeButtonClass" ></mat-icon>
+    </button>
   </div>
 
   <div id="post-details">
-    <span id="channel-link">
-
-    </span>
-    <span id="title">
-
-    </span>
-    <span id="content">
-
-    </span>
-    <div id="links">
-      <span id="comment">
-
+    <div id="channel-link">
+      <a [href]="postVariables.channelLink">
+        {{postVariables.channelLink}}
+      </a>
+    </div>
+    <span id="title" [routerLink]="postVariables.channelLink + '/'+ postVariables.id">
+      <span>
+        {{title|titlecase}}
       </span>
+    </span>
+    <div id="content" [routerLink]="postVariables.channelLink + '/'+ postVariables.id">
+      {{content}}
+    </div>
+    <div id="links">
+      <div id="comment">
+        <span>
+          {{comments}} Comments
+        </span>
+      </div>
       <span id="share">
-
+        {{'share'|titlecase}}
       </span>
     </div>
   </div>

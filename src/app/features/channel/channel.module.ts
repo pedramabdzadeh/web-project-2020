@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { ChannelRoutingModule } from './channel-routing.module';
 import { ChannelComponent } from './channel.component';
+import {PostModule} from '../post/post.module';
 
 
 @NgModule({
   declarations: [ChannelComponent],
   imports: [
     CommonModule,
-    ChannelRoutingModule
+    ChannelRoutingModule,
+    PostModule
   ]
 })
 export class ChannelModule { }

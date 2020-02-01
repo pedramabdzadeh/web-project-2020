@@ -1,1 +1,38 @@
-<p>post-details works!</p>
+<app-topbar></app-topbar>
+<app-side-bar></app-side-bar>
+<main class="post-container">
+    <div class="post-body">
+      <div class="score" id="score">
+        <button class="score-button" (click)="like()">
+          <mat-icon svgIcon="like" class="like-icon" [ngClass]="likeButtonClass" ></mat-icon>
+        </button>
+        <span>
+            {{post.score}}
+        </span>
+        <button class="score-button" (click)="dislike()">
+          <mat-icon svgIcon="dislike" class="dislike-icon" [ngClass]="dislikeButtonClass" ></mat-icon>
+        </button>
+      </div>
+      <div class="content">
+        <div class="channel-link" id="channel-link">
+          <a [href]="post.channelLink">
+            Channel Name
+          </a>
+        </div>
+        <div class="title" id="title">
+          {{post.title|titlecase}}
+        </div>
+        <div class="details" id="details">
+          {{post.content}}
+        </div>
+        <div id="links" class="links">
+        </div>
+      </div>
+    </div>
+    <div id="comments" class="comments">
+      <div *ngFor="let comment of post.comments" class="comment">
+        <app-comment [comment]="comment">
+        </app-comment>
+      </div>
+    </div>
+</main>

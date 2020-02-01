@@ -1,5 +1,6 @@
 nav {
   position: fixed;
+  z-index: 10;
   top: 0;
   width: 100vw;
   height: 7vh;
@@ -8,10 +9,7 @@ nav {
   background-color: white;
   padding-left: 2vw;
   align-items: center;
-  //padding-top: 1vh;
   a {
-    //min-width: 100px;
-
     width: 10vw;
     height: 3vh;
     color: grey;
@@ -22,11 +20,9 @@ nav {
       border-right: 2px mediumvioletred solid;
     }
   }
-
-  //box-shadow: 1px 2px 3px black;
 }
 input.empty {
-  font-family: FontAwesome;
+  font-family: FontAwesome, serif;
   font-style: normal;
   font-weight: normal;
   text-decoration: inherit;
