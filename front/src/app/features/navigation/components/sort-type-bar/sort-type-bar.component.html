@@ -1,0 +1,18 @@
+<div id="sort-bar" class="sort-bar">
+  <button class="sort-bar-button" id="following-button"
+          (click)="sort('following')">
+    {{'following'|titlecase}}
+  </button>
+  <button class="sort-bar-button" id="trending-button"
+          (click)="sort('trending')">
+    {{'trending'|titlecase}}
+  </button>
+  <button class="sort-bar-button" id="newest-button"
+          (click)="sort('newest')">
+    {{'Newest'|titlecase}}
+  </button>
+  <button class="sort-bar-button" id="contributed-button"
+          (click)="sort('contributed')">
+    {{'Contributed'|titlecase}}
+  </button>
+</div>

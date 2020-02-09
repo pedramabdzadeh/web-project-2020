@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="score">
+    <button class="score-button">
+      <mat-icon svgIcon="like" class="like"></mat-icon>
+    </button>
+    <span>
+      {{comment.score}}
+    </span>
+    <button class="score-button">
+      <mat-icon svgIcon="dislike" class="dislike"></mat-icon>
+    </button>
+  </div>
+  <div class="comment-body">
+    <div class="details">
+      asdfasdfasdf
+      asdfasdfasdf
+      asdfasdfasdf
+      asdfasdfasdf
+      asdfasdfasdf
+      asdfasdfasdf
+      asdfasdfasdf
+      asdfasdfasdf
+      asdfasdfasdf
+      asdfasdfasdf
+      asdfasdfasdf
+      asdfasdfasdf
+      asdfasdfasdf
+      asdfasdfasdf
+      asdfasdfasdf
+      asdfasdfasdf
+      asdfasdfasdf
+      asdfasdfasdf
+
+
+    </div>
+    <div *ngFor="let comment of comment.comments">
+      <app-comment  [comment]="comment"></app-comment>
+    </div>
+  </div>
+</div>

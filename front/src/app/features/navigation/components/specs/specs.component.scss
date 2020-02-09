@@ -1,0 +1,84 @@
+.container {
+  position: fixed;
+  height: 25vh;
+  top: 10vh;
+  border-radius: 5px;
+  width: 22vw;
+  left: 5vw;
+  background-color: white;
+  overflow-y: auto;
+}
+
+.body {
+  height: auto;
+  min-height: 50vh;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.container::-webkit-scrollbar {
+  width: 0.1em;
+}
+.container::-webkit-scrollbar-track {
+  background-color: white;
+}
+.container::-webkit-scrollbar-thumb {
+  background-color: mediumvioletred;
+}
+
+.title {
+  color: #545454;
+  height: 5vh;
+  font-weight: bolder;
+  border-bottom: lightgrey 1px solid;
+}
+
+.followers {
+  height: 5vh;
+  margin-top: 1vh;
+  font-size: small;
+  color: grey;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.summary {
+  p {
+    color: grey;
+    font-size: small;
+    font-weight: normal;
+    border-bottom: none;
+  }
+}
+.subtitle {
+  font-weight: bold;
+  color: grey;
+  border-bottom: 1px solid lightgrey;
+}
+
+.invite {
+  margin-left: auto;
+  display: flex;
+  align-items: flex-start;
+  button {
+    cursor: pointer;
+    border: none;
+    color: mediumvioletred;
+    outline: none;
+    background-color: white;
+    &:hover {
+      background-color: mediumvioletred;
+      color: white;
+      //height: 2.5vh;
+    }
+  }
+}
+.followers input {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid lightgrey;
+}

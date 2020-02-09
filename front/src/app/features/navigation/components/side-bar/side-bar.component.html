@@ -1,0 +1,16 @@
+<aside [className]="sidebarClass" >
+  <div class="header">
+    Following Channels
+  </div>
+  <div class="link-container">
+    <a *ngFor="let channel of channels" class="link" [href]="channel.link">
+      <div class="title">
+        {{channel.title}}
+      </div>
+      <div class="followers">
+        {{channel.follwers}}
+        Followers
+      </div>
+    </a>
+  </div>
+</aside>

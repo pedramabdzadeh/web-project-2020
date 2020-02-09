@@ -1,0 +1,50 @@
+<div id="container">
+  <div id="score" class="score">
+    <button class="score-button" (click)="like()">
+      <mat-icon svgIcon="like" class="like-icon" [ngClass]="likeButtonClass" ></mat-icon>
+    </button>
+    <span *ngIf="type !== 'create'">
+      {{postVariables.score}}
+    </span>
+    <span *ngIf="type === 'create'">
+      0
+    </span>
+    <button class="score-button" (click)="dislike()">
+      <mat-icon svgIcon="dislike" class="dislike-icon" [ngClass]="dislikeButtonClass" ></mat-icon>
+    </button>
+  </div>
+
+  <div id="post-details">
+    <div id="channel-link">
+      <a [href]="postVariables.channelLink">
+        {{postVariables.channelLink}}
+      </a>
+    </div>
+    <span id="title" [routerLink]="postVariables.channelLink + '/'+ postVariables.id"
+          *ngIf="type !== 'create'">
+      <span >
+        {{title|titlecase}}
+      </span>
+    </span>
+    <span id="create-title" *ngIf="type === 'create'">
+      <input  type="text" placeholder="Title">
+    </span>
+    <div id="content" [routerLink]="postVariables.channelLink + '/'+ postVariables.id"
+         *ngIf="type !== 'create'">
+      {{content}}
+    </div>
+    <div id="create-content" *ngIf="type === 'create'">
+      <textarea rows="15" cols="82" placeholder="Content"></textarea>
+    </div>
+    <div id="links">
+      <div id="comment">
+        <span>
+          {{comments}} Comments
+        </span>
+      </div>
+      <span id="share">
+        {{'share'|titlecase}}
+      </span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="body">
+    <div class="title">
+      {{title}}
+    </div>
+    <div class="followers">
+      <div *ngIf="!openInvite">
+        Followers {{followers}},
+        Authors {{authors}}
+      </div>
+      <div class="invite" *ngIf="!openInvite">
+        <button (click)="invite()">
+          Invite User
+        </button>
+      </div>
+      <div *ngIf="openInvite">
+        <label for="invite-input"></label>
+        <input id="invite-input" type="text" [(ngModel)]="username" name="username"
+               placeholder="Username" autocomplete="username">
+      </div>
+      <div class="invite" *ngIf="openInvite">
+        <button (click)="invite()">
+          Invite
+        </button>
+      </div>
+    </div>
+    <div class="summary">
+      <div id="subtitle" class="subtitle">Summary</div>
+        <p>{{summary}}</p>
+      </div>
+        <div class="summary">
+          <div class="subtitle">Rules</div>
+            <p>{{rules}}</p>
+          </div>
+  </div>
+</div>
